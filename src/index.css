@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "FuturaStdBold";
+  src: local("FuturaStdBold"),
+   url("./fonts/FuturaStdBold.woff") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "ArcherMediumPro";
+  src: local("ArcherMediumPro"),
+   url("./fonts/ArcherMediumPro.woff") format("truetype");
+  font-weight: bold;
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0px;
+  color: white;
+}
+h1{
+  font-family: "FuturaStdBold", ;
+  src: local("FuturaStdBold"), url("./fonts/FuturaStdBold.woff") format("truetype");
+  font-weight: bold;
+}
+h3,h4,h5,h6{
+  font-family: "ArcherMediumPro", ;
+  src: local("ArcherMediumPro"), url("./fonts/ArcherMediumPro.woff") format("truetype");
+  font-weight: medium;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,  'futura std',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

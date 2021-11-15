@@ -1,0 +1,29 @@
+#webXP_bg{
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+background-image: linear-gradient(to right,#02AFAC, #C0DF88);
+}
+#logo_holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+#webXP_bg h1, h3{
+    margin-top: 1%;
+    text-align: center;
+}
+#webXP_bg p{
+    margin-top: 1%;
+    text-align: center;
+}
+.qrHolder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.qrHolder img{
+    width: 30%;
+}
