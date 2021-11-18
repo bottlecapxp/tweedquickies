@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import {useHistory} from 'react-router-dom'
 import WhiteLogo from '../Assets/tweed-logo-white.svg'
 import ThankYouImage from '../Assets/Tweed_Quickies_Thankyou.svg'
-import './Pages.css'
+import './Pages.scss'
 
 /**
 * @author
@@ -20,7 +20,7 @@ const Thankyou = (props) => {
     }, [])
   return(
     <div className='thankyouBG'>
-  
+
         <div className='thankyouImg'>
         <img src={ThankYouImage} alt='thank-you-image'></img>
         </div>

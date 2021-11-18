@@ -1,0 +1,197 @@
+$afghanBlue: #03BBBB;
+$greenCushTeal: #C0F3F4;
+$chemdawgYellow: #F2E66A;
+$textRed: #EA514B;
+
+// Strains Options selection page
+
+.option_container{
+  width: 100%;
+  height: 100vh;
+
+  .wrapper_info{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .option_logo{
+      padding-top: 20px;
+      width: 20%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .product_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .product_img img{
+    width: 76%;
+  }
+}
+
+
+// Strain Info Slides
+.accordionEffect{
+  height: 90vh;
+  padding-top: 10%;
+
+  .tweedLogo {
+    width: 60px;
+
+    &.hbm{
+      width: 7%;
+      height: 5%;
+      margin-left:30%;
+    }
+  }
+
+  .header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .strainFlavorProfile,
+  .strainActivities {
+    img {
+      max-width: 80%;
+    }
+  }
+
+  .angledQuickie{
+    width: 250px;
+  }
+
+  .afghanNoDisplay {
+    display: block !important;
+  }
+
+  div[class*='NoDisplay'] {
+    display: none;
+    height: 90vh;
+  }
+
+  &.afghan_container {
+    background-color: $afghanBlue;
+
+    * {
+      color: #2D64BA;
+    }
+    .oneQuickie{
+      width: 280px;
+      margin-top: 0%;
+    }
+
+    .afks{
+      width: 50%;
+    }
+
+    .caseContainer{
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &.green_cush_container {
+    background-color: $greenCushTeal;
+
+    * {
+      color: $textRed;
+    }
+  }
+
+  &.chemdawg_container {
+    background-color: $chemdawgYellow;
+
+    * {
+      color: $textRed;
+    }
+  }
+
+
+}
+
+.active{
+  display: flex;
+}
+.footer p{
+  text-align: center;
+  font-size: 5px;
+  padding-bottom: 10px
+}
+
+.choose_feeling{
+  padding: 10px 0px 10px 0px;
+  width: 16%;
+}
+/* Slideshow container */
+
+.carousel-root {
+  height: 85vh;
+  .slide {
+    max-height: 75vh;
+    width: 100vw;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    text-align: center;
+  }
+
+  .carousel-slider {
+    height: 85vh;
+
+    .slider-wrapper {
+      height: 85vh;
+      display: flex;
+    }
+  }
+}
+// .slider-container {
+//   height: 100vh;
+//   display: inline-flex;
+//   /* overflow: hidden; */
+//   transform: translateX(0);
+//   will-change: transform;
+//   transition: transform 0.3s ease-out;
+//   cursor: grab;
+//   position: relative;
+//   margin: auto;
+//   /* max-width: 1000px; */
+// }
+
+/* Slides */
+
+
+.grabbing {
+  cursor: grabbing;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+}
+.blueProdx{
+  width: 85%;
+}
+.title_name{
+  opacity: 0;
+}
+.thankyouBG{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(#02AFAC, #C0DF88);
+  padding-top: 40%;
+}

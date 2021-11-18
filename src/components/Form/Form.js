@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Forms.css'
 import Logo from '../../Assets/tweed-logo-white.svg'
 import LogoBlack from '../../Assets/tweed-logo-black.svg'
-import GreenCush from '../../Assets/green-cush-quickies.svg'
+import GreenCush from '../../Assets/green-cush/green-cush-quickies.svg'
 import {Link, useHistory} from 'react-router-dom'
 import Loading from '../Loading/Loading'
 import WebXP from './WebXP'
@@ -26,7 +26,7 @@ const Form = (props) => {
             setTimeout(()=>{
                 history.push('/option')
             }, 1000)
-           
+
         }
 
 
@@ -34,7 +34,7 @@ const Form = (props) => {
 
 if(submission){
 return(
-<Loading />    
+<Loading />
 )
 }else{
     return (
@@ -50,11 +50,11 @@ return(
                 <div>
                     <h1 style={{ textAlign: 'center' }}>Date of Birth</h1>
                     <div id='input_section'>
-            
+
                     <input type="number" id="month" name="month" min="1" max="12" placeholder="MM" required></input>
-                   
+
                     <input type="number" id="day" name="day" min="1" max="31" placeholder="DD" required></input>
-                 
+
                     <input type="number" id="year" name="year" min="1900" max="2021" placeholder="YYYY" required></input>
 
                     <select id="region" placeholder="Region" required>
@@ -87,7 +87,7 @@ return(
         </div>
         </>
     )
-    
+
 }
 
 
