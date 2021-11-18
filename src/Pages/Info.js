@@ -25,23 +25,38 @@ import AfghanGoodIcon from '../Assets/Afghan/Afghan_Good_Icon.svg'
 import AfghanUndecidedIcon from '../Assets/Afghan/Afghan_Undecided_Icon.svg'
 
 // Green Cush Assets
-import GreenProd from '../Assets/green-cush/green-cush-container.svg'
-import LogoRed from '../Assets/tweed-logo-red.svg'
-import GreenKushBud2 from '../Assets/green-cush/green-cush-bud.png'
-import GreenKushBox2 from '../Assets/green-cush/green-cush-boxes.png'
-import GreenBg from '../Assets/green-cush/green-cush-mobile.jpeg'
-import GreenCushNothc from '../Assets/green-cush/GreenCush_NOTHC.svg'
-import GreenCush from '../Assets/green-cush/GreenCush_sativa.svg'
-import GreenBad from '../Assets/bad-icon.svg'
-import GreenGood from '../Assets/good-icon.svg'
-import GreenUndecided from '../Assets/undecided-icon.svg'
-import GreenCushGif from "./../Assets/green-cush/Green.gif";
+
+import GreenCushLineage from '../Assets/Greencush/Greencush_Lineage.svg'
+import GreenCushStrainActivities from '../Assets/Chemdawg/Chemdawg_Strain_Activities.svg'
+import GreenCushFlavorProfile from '../Assets/Greencush/Greencush_Flavor_Profiles.svg'
+import GreenCushCase from '../Assets/Greencush/green-cush-case.png'
+import GreenCushBud2 from '../Assets/Greencush/green-cush-bud.png'
+import GreenCushBox2 from '../Assets/Greencush/green-cush-boxes.png'
+import GreenCushTitle2 from '../Assets/Greencush/Greencush_Title2.svg'
+import GreenCush from '../Assets/Greencush/GreenCush_Sativa.svg'
+import GreenCushGif from "./../Assets/Greencush/Green.gif";
 
 // Chemdawg Assets
-
+import ChemdawgGif from "./../Assets/Kush.gif";
+import ChemdawgLineage from '../Assets/Chemdawg/Chemdawg_Lineage.svg'
+import ChemdawgStrainActivities from '../Assets/Chemdawg/Chemdawg_Strain_Activities.svg'
+import ChemdawgFlavorProfile from '../Assets/Chemdawg/Chemdawg_Flavor_Profiles.svg'
+import ChemdawgTitle from '../Assets/Chemdawg/Chemdawg_Title.svg' //small right
+import ChemdawgTitle2 from '../Assets/Chemdawg/Chemdawg_Title2.svg'
+import ChemdawgBud from '../Assets/Chemdawg/chemdawg-bud.png'
+import ChemdawgCase from '../Assets/Chemdawg/chemdawg-case.png'
 import Fpamobile2 from '../Assets/bud2.png'
 
 // General Assets
+import LogoRed from '../Assets/tweed-logo-red.svg'
+import RedHamburgerMenu from '../Assets/Hamburger_Red.svg'
+import RedOneQuickie from '../Assets/Red_1Quickie.svg'
+import RedTenQuickie from '../Assets/Red_10Quickies.svg'
+import RedYesIcon from '../Assets/Red_Yes_Icon.svg'
+import RedNoIcon from '../Assets/Red_No_Icon.svg'
+import RedBadIcon from '../Assets/Red_Bad_Icon.svg'
+import RedGoodIcon from '../Assets/Red_Good_Icon.svg'
+import RedUndecidedIcon from '../Assets/Red_Undecided_Icon.svg'
 import Yes from '../Assets/yes.svg'
 import No from '../Assets/no.svg'
 import Bad from '../Assets/bad.svg'
@@ -115,6 +130,10 @@ const history = useHistory()
     }
     if(props.match.params.strain === 'kush'){
       afghanToggle()
+    }
+
+    if(props.match.params.strain === 'chemdawg'){
+      chemdawgToggle()
     }
 
     setTimeout(() => {
@@ -373,13 +392,13 @@ if(loading){
             {/* One Quickie */}
             <div className='oneQuickie'>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-                <img style={{ width: '50%' }} className='Qks' src={AfghanKushTitle} alt='1 Quickies'></img>
+                <img style={{ width: '50%' }} className='Qks' src={AfghanKushTitle} alt='Afghan Title'></img>
               </div>
 
               <img className='Qks' src={AfghanGif} alt='1 Quickies'></img>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img className='Q1' style={{ width: '50%', position: 'absolute', marginTop: '-10%' }} src={AfghanOneQuickie} alt=''></img>
-                <img className='Q10' style={{ width: '60%', position: 'absolute', marginTop: '-10%', display: 'none', opacity: '0' }} src={AfghanTenQuickie} alt=''></img>
+                <img className='Q1' style={{ width: '50%', position: 'absolute', marginTop: '-10%' }} src={AfghanOneQuickie}  alt='1 Quickie 0.35mg per Quickie'></img>
+                <img className='Q10' style={{ width: '60%', position: 'absolute', marginTop: '-10%', display: 'none', opacity: '0' }} src={AfghanTenQuickie}  alt='10 Quickies 0.35mg per Quickie'></img>
               </div>
 
               <div className='strainActivities Q10' style={{ marginTop: '50px', display: 'none', opacity: '0' }}>
@@ -421,11 +440,11 @@ if(loading){
 
             {/* Info Capture */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0%' }}>
+              <img style={{ width: '70%', marginTop: '20px', marginBottom: '20px' }} src={AfghanKushTitle2} alt=''></img>
+
               <div className='caseContainer'>
                 <img src={AfghanKushCase} alt='flavour profile'></img>
               </div>
-
-              <img style={{ width: '70%', marginTop: '20px', marginBottom: '20px' }} src={AfghanKushTitle2} alt=''></img>
 
               <p>Hi, how would you rate your experience of www.tweedquickies.com?</p>
 
@@ -454,14 +473,11 @@ if(loading){
                   <img src={btnNo ? NoSelect : AfghanNoIcon} alt='No'></img>
                 </div>
               </div>
-              <div>
-                <div onClick={rDirect} style={{ padding: '4px', border: '1px solid white', width: '100px', borderRadius: '12px', marginTop: '10px' }}><h2>Send</h2></div>
+
+              <div className="submitButton" onClick={rDirect}>
+                <h3>Send</h3>
               </div>
-
-
             </div>
-
-
           </Carousel>
 
         </div>
@@ -474,89 +490,97 @@ if(loading){
         <div className='greencushNoDisplay'>
           <div className='header'>
             <img className='tweedLogo' src={LogoRed} alt=''></img>
-            <img className='tweedLogo hbm' src={AfghanHamburgMenu} alt=''></img>
+            <img className='tweedLogo hbm' src={RedHamburgerMenu} alt=''></img>
           </div>
 
           <Carousel showThumbs={false} showStatus={false} preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} autoPlay={false}>
             {/* One Quickie */}
             <div className='oneQuickie'>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-                <img style={{ width: '50%' }} className='Qks' src={GreenCush} alt='1 Quickies'></img>
+                <img style={{ width: '30%', marginBottom: '-45px' }} className='Qks' src={GreenCush} alt='Green Cush Title'></img>
               </div>
               <img className='Qks' src={GreenCushGif} alt='1 Quickies'></img>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img className='Q1G' style={{ width: '50%', position: 'absolute', marginTop: '10%' }} src={AfghanOneQuickie} alt=''></img>
-                <img className='Q10G' style={{ width: '60%', position: 'absolute', marginTop: '10%', display: 'none', opacity: '0' }} src={AfghanTenQuickie} alt=''></img>
+                <img className='Q1G' style={{ width: '50%', position: 'absolute', marginTop: '10%' }} src={RedOneQuickie}  alt='1 Quickie 0.35mg per Quickie'></img>
+                <img className='Q10G' style={{ width: '60%', position: 'absolute', marginTop: '10%', display: 'none', opacity: '0' }} src={RedTenQuickie}  alt='10 Quickies 0.35mg per Quickie'></img>
+              </div>
+
+              <div className='strainActivities Q10' style={{ marginTop: '100px', display: 'none', opacity: '0' }}>
+                <img src={GreenCushStrainActivities} alt='Strain Activities'></img>
               </div>
             </div>
 
             {/* Lineage */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
+              <h2>LINEAGE</h2>
               <p style={{ fontWeight: 'light' }}>GREEN CUSH</p>
               <p style={{ fontSize: '0.7rem', marginTop: '10px', padding: '0px 10% 0px 10%' }}>
-                <strong>Tweed Green Cush</strong> is a sativa-dominant strain with high THC and
-                minimal amounts of CBD. Green Cush is a cross of '89 Super Sativa Seed Club Skunk
-                #1 and an Afghani Landrace strain. The buds tend to be dense and covered with trichomes.
+                <strong>Tweed Green Cush</strong> is a sativa-dominant strain with high THC and minimal amounts of CBD.
+                Green Cush is a cross of '89 Super Sativa Seed Club Skunk #1 and an Afghani Landrace
+                strain. The buds tend to be dense and covered with trichomes.
               </p>
 
               <div style={{ marginTop: '20px' }} className='afks'>
-                <img src={GreenKushBox2} alt='GreenKushBoxes'></img>
+                <img src={GreenCushLineage} alt='Green Cush Lineage'></img>
               </div>
 
               <div className='afks'>
-                <img src={GreenKushBud2} alt='GreenKushBud'></img>
+                <img src={GreenCushBud2} alt='GreenKushBud'></img>
               </div>
             </div>
 
             {/* Flavour Profile */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div>
-                <img style={{ width: '50%' }} src={FlavourProfile} alt=''></img>
-              </div>
-              <p style={{ fontWeight: 'light' }}>GREEN CUSH</p>
+              <h2>FLAVOR PROFILE</h2>
+              <p style={{ fontWeight: 'light', marginTop: '5px' }}>GREEN CUSH</p>
               <div className='angledQuickie'>
-                <img src={Fpamobile2} alt='flavour profile'></img>
+                <img src={AngledJoint} alt='Angled Quickie'></img>
+              </div>
+              <div className='strainFlavorProfile'>
+                <img src={GreenCushFlavorProfile} alt='Strain Activities'></img>
               </div>
             </div>
 
             {/* Info Capture */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0%' }}>
-              <img style={{ width: '70%', marginTop: '20px' }} src={GreenCushNothc} alt=''></img>
-              <h3 style={{ fontWeight: 'light' }}>21% THC</h3>
+              <img style={{ width: '70%', marginTop: '20px', marginBottom: '20px' }} src={GreenCushTitle2} alt=''></img>
+
               <div className='caseContainer'>
-                <img src={GreenProd} alt='flavour profile'></img>
+                <img src={GreenCushCase} alt='flavour profile'></img>
               </div>
-              <p style={{ marginTop: '-20%' }}>Hi, how would you rate your experience of www.tweedquickies.com?</p>
+
+              <p>Hi, how would you rate your experience of www.tweedquickies.com?</p>
 
               <div style={{ display: 'flex', width: '100%', justifyContent: 'space-evenly' }}>
+                <div onClick={badSelected} className='choose_feeling'>
+                  <img src={btnAFGBad ? BadSelect : RedBadIcon} alt='bad'></img>
+                </div>
 
-                <div onClick={badSelectedG} className='choose_feeling'>
-                  <img src={btnAFGBadG ? BadSelect : Bad} alt='bad'></img>
+                <div onClick={undecidedSelected} className='choose_feeling'>
+                  <img src={btnAFGUndecided ? UndecidedSelect : RedUndecidedIcon} alt='undecided'></img>
                 </div>
-                <div onClick={undecidedSelectedG} className='choose_feeling'>
-                  <img src={btnAFGUndecidedG ? UndecidedSelect : Undecided} alt='undecided'></img>
-                </div>
-                <div onClick={goodSelectedG} className='choose_feeling'>
-                  <img src={btnAFGGoodG ? GoodSelect : Good} alt='good'></img>
+
+                <div onClick={goodSelected} className='choose_feeling'>
+                  <img src={btnAFGGood ? GoodSelect : RedGoodIcon} alt='good'></img>
                 </div>
               </div>
 
               <p>Are you planning to buy Tweed Quickies?</p>
               <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
 
-                <div onClick={yesSelectedG} style={{ marginRight: '40px' }} className='choose_feeling'>
-                  <img src={btnYesG ? Yes : YesSelect} alt='bad'></img>
+                <div onClick={noSelected} style={{ marginRight: '40px' }} className='choose_feeling'>
+                  <img src={btnYes ? YesSelect : RedYesIcon} alt='Yes'></img>
                 </div>
-                <div onClick={noSelectedG} className='choose_feeling'>
-                  <img src={btnNoG ? No : NoSelect} alt='good'></img>
+
+                <div onClick={yesSelected} className='choose_feeling'>
+                  <img src={btnNo ? NoSelect : RedNoIcon} alt='No'></img>
                 </div>
               </div>
-              <div>
-                <div onClick={rDirect} style={{ padding: '4px', border: '1px solid white', width: '100px', borderRadius: '12px', marginTop: '10px' }}><h2>Send</h2></div>
+
+              <div className="submitButton" onClick={rDirect}>
+                <h3>Send</h3>
               </div>
-
-
             </div>
           </Carousel>
         </div>
@@ -568,87 +592,96 @@ if(loading){
         <div className='chemdawgNoDisplay'>
           <div className='header'>
             <img className='tweedLogo' src={LogoRed} alt=''></img>
-            <img className='tweedLogo hbm' src={AfghanHamburgMenu} alt=''></img>
+            <img className='tweedLogo hbm' src={RedHamburgerMenu} alt=''></img>
           </div>
 
           <Carousel showThumbs={false} showStatus={false} preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} autoPlay={false}>
             {/* One Quickie */}
             <div className='oneQuickie'>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-                <img style={{ width: '50%' }} className='Qks' src={GreenCush} alt='1 Quickies'></img>
+                <img style={{ width: '30%', marginBottom: '-100px' }} className='Qks' src={ChemdawgTitle} alt='Chemdawg Title'></img>
               </div>
               <img className='Qks' src={GreenCushGif} alt='1 Quickies'></img>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img className='Q1G' style={{ width: '50%', position: 'absolute', marginTop: '10%' }} src={AfghanOneQuickie} alt=''></img>
-                <img className='Q10G' style={{ width: '60%', position: 'absolute', marginTop: '10%', display: 'none', opacity: '0' }} src={AfghanTenQuickie} alt=''></img>
+                <img className='Q1G' style={{ width: '50%', position: 'absolute', marginTop: '10%' }} src={RedOneQuickie} alt='1 Quickie 0.35mg per Quickie'></img>
+                <img className='Q10G' style={{ width: '60%', position: 'absolute', marginTop: '10%', display: 'none', opacity: '0' }} src={RedTenQuickie} alt='10 Quickies 0.35 mg per Quickie'></img>
+              </div>
+
+              <div className='strainActivities Q10' style={{ marginTop: '100px', display: 'none', opacity: '0' }}>
+                <img src={ChemdawgStrainActivities} alt='Strain Activities'></img>
               </div>
             </div>
             {/* Lineage */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <p style={{ fontWeight: 'light' }}>CHEMDAWG</p>
+              <img style={{ width: '70%', marginTop: '20px', marginBottom: '20px' }} src={ChemdawgTitle} alt=''></img>
+
               <p style={{ fontSize: '0.7rem', marginTop: '10px', padding: '0px 10% 0px 10%' }}>
-                <strong>Tweed Green Cush</strong> is a sativa-dominant strain with high THC and
-                minimal amounts of CBD. Green Cush is a cross of '89 Super Sativa Seed Club
-                Skunk #1 and an Afghani Landrace strain. The buds tend to be dense and covered
-                with trichomes.
+                <strong>Tweed Chemdawg</strong> with origins from Thai and Nepali landrace strains, Chemdawg is
+                known for its distinct, diesel-like aroma. Pungent and sharp, you’ll be able
+                to smell this strain from a mile away.
               </p>
 
               <div style={{ marginTop: '20px' }} className='afks'>
-                <img src={GreenKushBox2} alt='GreenKushBoxes'></img>
+                <img src={ChemdawgLineage} alt='GreenKushBoxes'></img>
               </div>
 
               <div className='afks'>
-                <img src={GreenKushBud2} alt='GreenKushBud'></img>
+                <img src={ChemdawgBud} alt='GreenKushBud'></img>
               </div>
             </div>
 
             {/* Flavour Profile */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div>
-                <img style={{ width: '50%' }} src={FlavourProfile} alt=''></img>
-              </div>
+              <h2>FLAVOR PROFILE</h2>
               <p style={{ fontWeight: 'light' }}>CHEMDAWG</p>
               <div className='angledQuickie'>
-                <img src={Fpamobile2} alt='flavour profile'></img>
+                <img src={AngledJoint} alt='flavour profile'></img>
+              </div>
+
+              <div className='strainFlavorProfile'>
+                <img src={ChemdawgFlavorProfile} alt='Strain Activities'></img>
               </div>
             </div>
 
             {/* Info Capture */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0%' }}>
-              <img style={{ width: '70%', marginTop: '20px' }} src={GreenCushNothc} alt=''></img>
-              <h3 style={{ fontWeight: 'light' }}>21% THC</h3>
+              <img style={{ width: '70%', marginTop: '20px', marginBottom: '20px' }} src={ChemdawgTitle2} alt=''></img>
+
               <div className='caseContainer'>
-                <img src={GreenProd} alt='flavour profile'></img>
+                <img src={ChemdawgCase} alt='flavour profile'></img>
               </div>
-              <p style={{ marginTop: '-20%' }}>Hi, how would you rate your experience of www.tweedquickies.com?</p>
+
+              <p>Hi, how would you rate your experience of www.tweedquickies.com?</p>
 
               <div style={{ display: 'flex', width: '100%', justifyContent: 'space-evenly' }}>
+                <div onClick={badSelected} className='choose_feeling'>
+                  <img src={btnAFGBad ? BadSelect : RedBadIcon} alt='bad'></img>
+                </div>
 
-                <div onClick={badSelectedG} className='choose_feeling'>
-                  <img src={btnAFGBadG ? BadSelect : Bad} alt='bad'></img>
+                <div onClick={undecidedSelected} className='choose_feeling'>
+                  <img src={btnAFGUndecided ? UndecidedSelect : RedUndecidedIcon} alt='undecided'></img>
                 </div>
-                <div onClick={undecidedSelectedG} className='choose_feeling'>
-                  <img src={btnAFGUndecidedG ? UndecidedSelect : Undecided} alt='undecided'></img>
-                </div>
-                <div onClick={goodSelectedG} className='choose_feeling'>
-                  <img src={btnAFGGoodG ? GoodSelect : Good} alt='good'></img>
+
+                <div onClick={goodSelected} className='choose_feeling'>
+                  <img src={btnAFGGood ? GoodSelect : RedGoodIcon} alt='good'></img>
                 </div>
               </div>
 
               <p>Are you planning to buy Tweed Quickies?</p>
               <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
 
-                <div onClick={yesSelectedG} style={{ marginRight: '40px' }} className='choose_feeling'>
-                  <img src={btnYesG ? Yes : YesSelect} alt='bad'></img>
+                <div onClick={noSelected} style={{ marginRight: '40px' }} className='choose_feeling'>
+                  <img src={btnYes ? YesSelect : RedYesIcon} alt='Yes'></img>
                 </div>
-                <div onClick={noSelectedG} className='choose_feeling'>
-                  <img src={btnNoG ? No : NoSelect} alt='good'></img>
+
+                <div onClick={yesSelected} className='choose_feeling'>
+                  <img src={btnNo ? NoSelect : RedNoIcon} alt='No'></img>
                 </div>
-              </div>
-              <div>
-                <div onClick={rDirect} style={{ padding: '4px', border: '1px solid white', width: '100px', borderRadius: '12px', marginTop: '10px' }}><h2>Send</h2></div>
               </div>
 
+              <div className="submitButton" onClick={rDirect}>
+                <h3>Send</h3>
+              </div>
             </div>
           </Carousel>
         </div>
