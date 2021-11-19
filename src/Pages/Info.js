@@ -8,7 +8,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 import AfghanOneQuickie from '../Assets/Afghan/1Quickie.svg'
 import AfghanTenQuickie from '../Assets/Afghan/10Quickies.svg'
-import AfghanGif from "./../Assets/Kush.gif";
+import AfghanGif from "./../Assets/Afghan/Afghan_Animation.gif";
 import AfghanStrainActivities from '../Assets/Afghan/Afghan_Strain_Activties.svg'
 import AfghanFlavorProfile from '../Assets/Afghan/Afghan_Flavor_Profile.svg'
 import AfghanKushTitle from '../Assets/Afghan/Afghan_Indica.svg' //small right
@@ -27,17 +27,16 @@ import AfghanUndecidedIcon from '../Assets/Afghan/Afghan_Undecided_Icon.svg'
 // Green Cush Assets
 
 import GreenCushLineage from '../Assets/Greencush/Greencush_Lineage.svg'
-import GreenCushStrainActivities from '../Assets/Chemdawg/Chemdawg_Strain_Activities.svg'
+import GreenCushStrainActivities from '../Assets/Greencush/Greencush_Strain_Activities.svg'
 import GreenCushFlavorProfile from '../Assets/Greencush/Greencush_Flavor_Profiles.svg'
 import GreenCushCase from '../Assets/Greencush/green-cush-case.png'
 import GreenCushBud2 from '../Assets/Greencush/green-cush-bud.png'
-import GreenCushBox2 from '../Assets/Greencush/green-cush-boxes.png'
 import GreenCushTitle2 from '../Assets/Greencush/Greencush_Title2.svg'
-import GreenCush from '../Assets/Greencush/GreenCush_Sativa.svg'
-import GreenCushGif from "./../Assets/Greencush/Green.gif";
+import GreenCush from '../Assets/Greencush/Greencush_Sativa.svg'
+import GreenCushGif from "./../Assets/Greencush/Greencush_Animation.gif";
 
 // Chemdawg Assets
-import ChemdawgGif from "./../Assets/Kush.gif";
+import ChemdawgGif from "./../Assets/Chemdawg/Chemdawg_Animation.gif";
 import ChemdawgLineage from '../Assets/Chemdawg/Chemdawg_Lineage.svg'
 import ChemdawgStrainActivities from '../Assets/Chemdawg/Chemdawg_Strain_Activities.svg'
 import ChemdawgFlavorProfile from '../Assets/Chemdawg/Chemdawg_Flavor_Profiles.svg'
@@ -176,15 +175,15 @@ const history = useHistory()
 
     gsap.to(".afghan_container", {
       opacity: 1,
-      height: "90vh"
+      minHeight: "90vh"
     })
     gsap.to(".green_cush_container", {
       opacity: 1,
-      height: "10vh"
+      minHeight: "10vh"
     })
     gsap.to(".chemdawg_container", {
       opacity: 1,
-      height: "10vh"
+      minHeight: "10vh"
     })
     gsap.to(".footer", {
       position: 'absolute', bottom: '0', marginBottom: '10%', duration: "1"
@@ -203,13 +202,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".afghan_container", {
-      height: '90vh', duration: "1"
+      minHeight: '90vh', duration: "1"
     })
     gsap.to(".green_cush_container", {
-      height: '10vh', duration: "1"
+      minHeight: '10vh', duration: "1"
     })
     gsap.to(".chemdawg_container", {
-      height: '10vh', duration: "1"
+      minHeight: '10vh', duration: "1"
     })
     gsap.to(".afghanNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -236,13 +235,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".green_cush_container", {
-      height: '90vh', duration: "1"
+      minHeight: '90vh', duration: "1"
     })
     gsap.to(".chemdawg_container", {
-      height: '10vh', duration: "1"
+      minHeight: '10vh', duration: "1"
     })
     gsap.to(".afghan_container", {
-      height: '10vh', duration: "1"
+      minHeight: '10vh', duration: "1"
     })
     gsap.to(".greencushNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -269,13 +268,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".chemdawg_container", {
-      height: '90vh', duration: "1"
+      minHeight: '90vh', duration: "1"
     })
     gsap.to(".green_cush_container", {
-      height: '10vh', duration: "1"
+      minHeight: '10vh', duration: "1"
     })
     gsap.to(".afghan_container", {
-      height: '10vh', duration: "1"
+      minHeight: '10vh', duration: "1"
     })
     gsap.to(".chemdawgNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -290,21 +289,6 @@ const history = useHistory()
       display: 'block', opacity: '1', duration: "1"
     })
   }
-
-  // const toggleVisibleClasses = () => {
-  //   if (afghanContainer.current.className.includes('closed')) {
-  //     afghanContainer.current.className = 'accordionEffect open afghan_container'
-  //   } else {
-  //     afghanContainer.current.className = 'accordionEffect closed afghan_container'
-  //   }
-
-  //   if (greenCushContainer.current.className.includes('closed')) {
-  //     greenCushContainer.current.className = 'accordionEffect open green_cush_container'
-  //   } else {
-  //     greenCushContainer.current.className = 'accordionEffect closed green_cush_container'
-  //   }
-  // }
-
 
   const [loading, setLoading] = useState(false)
 
@@ -380,7 +364,7 @@ if(loading){
 } else{
   return (
     <div>
-      <section onClick={afghanToggle} ref={afghanContainer} id='accordionEffect' className='accordionEffect open afghan_container'>
+      <section onClick={afghanToggle} ref={afghanContainer} id='afghanContainer' className='accordionEffect open afghan_container'>
         <h1 className='afghanHiddenTitle' style={{ textAlign: 'center', fontSize: '40px', opacity: '0', display: 'none' }}>AFGHAN KUSH</h1>
         <div className='afghanNoDisplay'>
           <div className='header'>
@@ -485,7 +469,7 @@ if(loading){
 
 
       {/* Green Cush */}
-      <section onClick={greenToggle} ref={greenCushContainer} id='accordionEffect' className='accordionEffect closed green_cush_container'>
+      <section onClick={greenToggle} ref={greenCushContainer} id='greencushContainer' className='accordionEffect closed green_cush_container'>
         <h1 className='greencushHiddenTitle' style={{ textAlign: 'center', fontSize: '40px' }}>GREEN CUSH</h1>
         <div className='greencushNoDisplay'>
           <div className='header'>
@@ -587,7 +571,7 @@ if(loading){
       </section>
 
       {/* Chemdawg */}
-      <section onClick={chemdawgToggle} ref={chemdawgContainer} id='accordionEffect' className='accordionEffect closed chemdawg_container'>
+      <section onClick={chemdawgToggle} ref={chemdawgContainer} id='chemdawgContainer' className='accordionEffect closed chemdawg_container'>
         <h1 className='chemdawgHiddenTitle' style={{ textAlign: 'center', fontSize: '40px' }}>CHEMDAWG</h1>
         <div className='chemdawgNoDisplay'>
           <div className='header'>
@@ -601,7 +585,7 @@ if(loading){
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
                 <img style={{ width: '30%', marginBottom: '-100px' }} className='Qks' src={ChemdawgTitle} alt='Chemdawg Title'></img>
               </div>
-              <img className='Qks' src={GreenCushGif} alt='1 Quickies'></img>
+              <img className='Qks' src={ChemdawgGif} alt='1 Quickies'></img>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <img className='Q1G' style={{ width: '50%', position: 'absolute', marginTop: '10%' }} src={RedOneQuickie} alt='1 Quickie 0.35mg per Quickie'></img>
                 <img className='Q10G' style={{ width: '60%', position: 'absolute', marginTop: '10%', display: 'none', opacity: '0' }} src={RedTenQuickie} alt='10 Quickies 0.35 mg per Quickie'></img>

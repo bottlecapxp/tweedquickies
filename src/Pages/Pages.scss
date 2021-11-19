@@ -23,13 +23,23 @@ $textRed: #EA514B;
       }
     }
 
-    &.chemdawg {
+    &.afghanKush {
       &.noTitle {
         padding-top: 70px;
       }
     }
 
+    &.chemdawg {
+      .titleContainer {
+        margin-bottom: 100px;
+      }
 
+      .product_img {
+        img {
+          top: -80px;
+        }
+      }
+    }
   }
 
   .logo_img{
@@ -48,16 +58,20 @@ $textRed: #EA514B;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    img{
+      width: 50%;
+      top: 20px;
+      position: relative;
+    }
   }
-  .product_img img{
-    width: 76%;
-  }
+
 }
 
 
 // Strain Info Slides
 .accordionEffect{
-  height: 90vh;
+  min-height: 90vh;
   padding-top: 10%;
 
   .tweedLogo {
@@ -100,7 +114,7 @@ $textRed: #EA514B;
 
   div[class*='NoDisplay'] {
     display: none;
-    height: 90vh;
+    min-height: 90vh;
   }
 
   .submitButton {
@@ -194,9 +208,9 @@ $textRed: #EA514B;
 /* Slideshow container */
 
 .carousel-root {
-  height: 85vh;
+  min-height: 85vh;
   .slide {
-    max-height: 85vh;
+    min-height: 85vh;
     width: 100vw;
     padding: 1rem;
     display: flex;
@@ -207,10 +221,10 @@ $textRed: #EA514B;
   }
 
   .carousel-slider {
-    height: 85vh;
+    min-height: 85vh;
 
     .slider-wrapper {
-      height: 85vh;
+      min-height: 85vh;
       display: flex;
     }
   }
