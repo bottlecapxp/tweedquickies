@@ -126,13 +126,26 @@ const history = useHistory()
 
     if(props.match.params.strain === 'cush'){
       greenToggle()
-    }
-    if(props.match.params.strain === 'kush'){
+    } else if(props.match.params.strain === 'kush'){
       afghanToggle()
-    }
-
-    if(props.match.params.strain === 'chemdawg'){
+    } else if(props.match.params.strain === 'chemdawg'){
       chemdawgToggle()
+    } else {
+      gsap.to(".afghan_container", {
+        opacity: 1,
+        // height: "90vh",
+        minHeight: "90vh"
+      })
+      gsap.to(".green_cush_container", {
+        opacity: 1,
+        // height: "10vh",
+        minHeight: "10vh"
+      })
+      gsap.to(".chemdawg_container", {
+        opacity: 1,
+        // height: "10vh",
+        minHeight: "10vh"
+      })
     }
 
     setTimeout(() => {
@@ -154,37 +167,25 @@ const history = useHistory()
 
     }, 3000)
 
-    setTimeout(() => {
+    // setTimeout(() => {
 
-      gsap.to('.title_name', {
-        opacity: '1',
-        duration: '1'
-      })
-      gsap.to('.Q1G', {
-        display: 'none',
-        opacity: '0',
-        duration: '1'
-      })
-      gsap.to('.Q10G', {
-        display: 'block',
-        opacity: '1',
-        duration: '1'
-      })
+    //   gsap.to('.title_name', {
+    //     opacity: '1',
+    //     duration: '1'
+    //   })
+    //   gsap.to('.Q1G', {
+    //     display: 'none',
+    //     opacity: '0',
+    //     duration: '1'
+    //   })
+    //   gsap.to('.Q10G', {
+    //     display: 'block',
+    //     opacity: '1',
+    //     duration: '1'
+    //   })
 
-    }, 2500)
+    // }, 2500)
 
-    gsap.to(".afghan_container", {
-      opacity: 1,
-      minHeight: "90vh"
-    })
-    gsap.to(".green_cush_container", {
-      opacity: 1,
-      minHeight: "10vh"
-    })
-    gsap.to(".chemdawg_container", {
-      opacity: 1,
-      minHeight: "10vh"
-    })
     gsap.to(".footer", {
       position: 'absolute', bottom: '0', marginBottom: '10%', duration: "1"
     })
@@ -202,13 +203,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".afghan_container", {
-      minHeight: '90vh', duration: "1"
+      duration: "1", minHeight: "90vh"
     })
     gsap.to(".green_cush_container", {
-      minHeight: '10vh', duration: "1"
+      duration: "1", minHeight: "10vh"
     })
     gsap.to(".chemdawg_container", {
-      minHeight: '10vh', duration: "1"
+      duration: "1" , minHeight: "10vh"
     })
     gsap.to(".afghanNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -235,13 +236,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".green_cush_container", {
-      minHeight: '90vh', duration: "1"
+      duration: "1", minHeight: "90vh"
     })
     gsap.to(".chemdawg_container", {
-      minHeight: '10vh', duration: "1"
+      duration: "1", minHeight: "10vh"
     })
     gsap.to(".afghan_container", {
-      minHeight: '10vh', duration: "1"
+      duration: "1", minHeight: "10vh"
     })
     gsap.to(".greencushNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -268,13 +269,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".chemdawg_container", {
-      minHeight: '90vh', duration: "1"
+      duration: "1", minHeight: "90vh"
     })
     gsap.to(".green_cush_container", {
-      minHeight: '10vh', duration: "1"
+      duration: "1", minHeight: "10vh"
     })
     gsap.to(".afghan_container", {
-      minHeight: '10vh', duration: "1"
+      duration: "1", minHeight: "10vh"
     })
     gsap.to(".chemdawgNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -405,7 +406,7 @@ if(loading){
                 <img src={AfghanLineage} alt='Afghan Kush Lineage'></img>
               </div>
 
-              <div className='afks'>
+              <div className='budImg'>
                 <img src={AfghanKushBud} alt='GreenKushBud'></img>
               </div>
             </div>
@@ -509,7 +510,7 @@ if(loading){
                 <img src={GreenCushLineage} alt='Green Cush Lineage'></img>
               </div>
 
-              <div className='afks'>
+              <div className='budImg'>
                 <img src={GreenCushBud2} alt='GreenKushBud'></img>
               </div>
             </div>
@@ -609,7 +610,7 @@ if(loading){
                 <img src={ChemdawgLineage} alt='GreenKushBoxes'></img>
               </div>
 
-              <div className='afks'>
+              <div className='budImg'>
                 <img src={ChemdawgBud} alt='GreenKushBud'></img>
               </div>
             </div>
