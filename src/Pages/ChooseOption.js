@@ -32,37 +32,49 @@ const ChooseOption = (props) => {
     }
   return(
     <div className='option_container'>
-      <div onClick={viewInfoChemdawg} className='wrapper_info chemdawg' style={{backgroundImage: `url(${RedYellowBg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:"center center"}}>
+      <div className='wrapper_info chemdawg' style={{backgroundImage: `url(${RedYellowBg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:"center center"}}>
         <div className='logo_img'>
           <img className='option_logo' src={Logo} alt='logo'></img>
         </div>
 
         <div className="titleContainer" style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
-          <img style={{width: '60%'}} src={Chemdawg} alt='Afghan Kush'></img>
+          <img style={{width: '60%'}} src={Chemdawg} alt='Chemdawg'></img>
         </div>
 
-        <div className='product_img'>
+        <div className='productImg'>
           <img src={ChemdawgCase} alt='logo'></img>
+        </div>
+
+        <div onClick={viewInfoChemdawg} className="exploreBtn">
+          Explore Chemdawg
         </div>
       </div>
 
-      <div onClick={viewInfoKush} className='wrapper_info afghanKush noTitle' style={{backgroundImage: `url(${BlueTealBg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:"center center"}}>
+      <div className='wrapper_info afghanKush noTitle' style={{backgroundImage: `url(${BlueTealBg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:"center center"}}>
         <div className="titleContainer" style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
           <img style={{width: '60%'}} src={AfghanKush} alt='Afghan Kush High THC Indica'></img>
         </div>
 
-        <div className='product_img'>
+        <div className='productImg'>
           <img src={AfghanCase} alt='logo'></img>
+        </div>
+
+        <div onClick={viewInfoKush} className="exploreBtn">
+          Explore Afghan Kush
         </div>
       </div>
 
-      <div onClick={viewInfoCush} className='wrapper_info greenCush noTitle' style={{backgroundImage: `url(${RedTealBg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:"center center"}}>
+      <div className='wrapper_info greenCush noTitle' style={{backgroundImage: `url(${RedTealBg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:"center center"}}>
         <div className="titleContainer" style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
           <img style={{width: '60%'}} src={GreenCush} alt='Green Cush'></img>
         </div>
 
-        <div className='product_img'>
+        <div className='productImg'>
           <img src={GreenCushCase} alt='logo'></img>
+        </div>
+
+        <div onClick={viewInfoCush} className="exploreBtn">
+          Explore Green Cush
         </div>
       </div>
     </div>

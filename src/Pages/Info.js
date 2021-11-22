@@ -32,7 +32,7 @@ import GreenCushFlavorProfile from '../Assets/Greencush/Greencush_Flavor_Profile
 import GreenCushCase from '../Assets/Greencush/green-cush-case.png'
 import GreenCushBud2 from '../Assets/Greencush/green-cush-bud.png'
 import GreenCushTitle2 from '../Assets/Greencush/Greencush_Title2.svg'
-import GreenCush from '../Assets/Greencush/Greencush_Sativa.svg'
+import GreenCushTitle from '../Assets/Greencush/Greencush_Title.svg'
 import GreenCushGif from "./../Assets/Greencush/Greencush_Animation.gif";
 
 // Chemdawg Assets
@@ -482,7 +482,7 @@ if(loading){
             {/* One Quickie */}
             <div className='oneQuickie'>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-                <img style={{ width: '30%', marginBottom: '-45px' }} className='Qks' src={GreenCush} alt='Green Cush Title'></img>
+                <img style={{ width: '30%', marginBottom: '-45px' }} className='Qks' src={GreenCushTitle} alt='Green Cush Title'></img>
               </div>
               <img className='Qks' src={GreenCushGif} alt='1 Quickies'></img>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
