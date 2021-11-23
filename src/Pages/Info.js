@@ -184,7 +184,7 @@ const history = useHistory()
     // }, 2500)
 
     gsap.to(".footer", {
-      position: 'absolute', bottom: '0', marginBottom: '10%', duration: "1"
+      position: 'absolute', bottom: '0', marginBottom: '10%', duration: "0.5"
     })
 
   }, [])
@@ -195,31 +195,31 @@ const history = useHistory()
       display: "none", duration: "0"
     })
     gsap.to(".chemdawgNoDisplay", {
-      opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
+      opacity: '0', display: "none", duration: "0.5", pointerEvents: 'none'
     })
     gsap.to(".greencushNoDisplay", {
-      opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
+      opacity: '0', display: "none", duration: "0.5", pointerEvents: 'none'
     })
     gsap.to(".afghan_container", {
-      duration: "1", height: "100vh"
+      duration: "0.5", height: "100vh"
     })
     gsap.to(".green_cush_container", {
-      duration: "1", height: "60px"
+      duration: "0.5", height: "60px"
     })
     gsap.to(".chemdawg_container", {
-      duration: "1" , height: "60px"
+      duration: "0.5" , height: "60px"
     })
     gsap.to(".afghanNoDisplay", {
-      display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
+      display: 'block', opacity: '1', duration: "0.5", pointerEvents: 'initial'
     })
     gsap.to(".footer", {
-      position: 'absolute', bottom: '0', marginBottom: '10%', duration: "1"
+      position: 'absolute', bottom: '0', marginBottom: '10%', duration: "0.5"
     })
     gsap.to(".greencushHiddenTitle", {
-      display: 'block', opacity: '1', duration: "1"
+      display: 'block', opacity: '1', duration: "0.5"
     })
     gsap.to(".chemdawgHiddenTitle", {
-      display: 'block', opacity: '1', duration: "1"
+      display: 'block', opacity: '1', duration: "0.5"
     })
   }
 
@@ -228,31 +228,31 @@ const history = useHistory()
       display: "none", duration: "0"
     })
     gsap.to(".afghanNoDisplay", {
-      opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
+      opacity: '0', display: "none", duration: "0.5", pointerEvents: 'none'
     })
     gsap.to(".chemdawgNoDisplay", {
-      opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
+      opacity: '0', display: "none", duration: "0.5", pointerEvents: 'none'
     })
     gsap.to(".green_cush_container", {
-      duration: "1", height: "100vh"
+      duration: "0.5", height: "100vh"
     })
     gsap.to(".chemdawg_container", {
-      duration: "1", height: "60px"
+      duration: "0.5", height: "60px"
     })
     gsap.to(".afghan_container", {
-      duration: "1", height: "60px"
+      duration: "0.5", height: "60px"
     })
     gsap.to(".greencushNoDisplay", {
-      display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
+      display: 'block', opacity: '1', duration: "0.5", pointerEvents: 'initial'
     })
     gsap.to(".footer", {
-      position: 'absolute', bottom: '0', marginBottom: '-20%', duration: "1"
+      position: 'absolute', bottom: '0', marginBottom: '-20%', duration: "0.5"
     })
     gsap.to(".afghanHiddenTitle", {
-      display: 'block', opacity: '1', duration: "1"
+      display: 'block', opacity: '1', duration: "0.5"
     })
     gsap.to(".chemdawgHiddenTitle", {
-      display: 'block', opacity: '1', duration: "1"
+      display: 'block', opacity: '1', duration: "0.5"
     })
   }
 
@@ -261,31 +261,31 @@ const history = useHistory()
       display: "none", duration: "0"
     })
     gsap.to(".afghanNoDisplay", {
-      opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
+      opacity: '0', display: "none", duration: "0.5", pointerEvents: 'none'
     })
     gsap.to(".greencushNoDisplay", {
-      opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
+      opacity: '0', display: "none", duration: "0.5", pointerEvents: 'none'
     })
     gsap.to(".chemdawg_container", {
-      duration: "1", height: "100vh"
+      duration: "0.5", height: "100vh"
     })
     gsap.to(".green_cush_container", {
-      duration: "1", height: "60px"
+      duration: "0.5", height: "60px"
     })
     gsap.to(".afghan_container", {
-      duration: "1", height: "60px"
+      duration: "0.5", height: "60px"
     })
     gsap.to(".chemdawgNoDisplay", {
-      display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
+      display: 'block', opacity: '1', duration: "0.5", pointerEvents: 'initial'
     })
     gsap.to(".footer", {
-      position: 'absolute', bottom: '0', marginBottom: '-20%', duration: "1"
+      position: 'absolute', bottom: '0', marginBottom: '-20%', duration: "0.5"
     })
     gsap.to(".afghanHiddenTitle", {
-      display: 'block', opacity: '1', duration: "1"
+      display: 'block', opacity: '1', duration: "0.5"
     })
     gsap.to(".greencushHiddenTitle", {
-      display: 'block', opacity: '1', duration: "1"
+      display: 'block', opacity: '1', duration: "0.5"
     })
   }
 
@@ -462,7 +462,7 @@ if(loading){
               </div>
             </div>
           </Carousel>
-
+          <p className='footerP'>This communication is intended for adults only and should not be shared with minors. There are risks associated with cannabis use. For information, search online “Health Canada - cannabis health effects”.</p>
         </div>
       </section>
 
@@ -566,6 +566,7 @@ if(loading){
               </div>
             </div>
           </Carousel>
+          <p className='footerP'>This communication is intended for adults only and should not be shared with minors. There are risks associated with cannabis use. For information, search online “Health Canada - cannabis health effects”.</p>
         </div>
       </section>
 
@@ -586,8 +587,8 @@ if(loading){
               </div>
               <img className='Qks' src={ChemdawgGif} alt='1 Quickies'></img>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img className='Q1G' style={{ width: '50%', position: 'absolute', marginTop: '10%' }} src={RedOneQuickie} alt='1 Quickie 0.35mg per Quickie'></img>
-                <img className='Q10G' style={{ width: '60%', position: 'absolute', marginTop: '10%', display: 'none', opacity: '0' }} src={RedTenQuickie} alt='10 Quickies 0.35 mg per Quickie'></img>
+                <img className='Q1' style={{ width: '50%', position: 'absolute', marginTop: '10%' }} src={RedOneQuickie} alt='1 Quickie 0.35mg per Quickie'></img>
+                <img className='Q10' style={{ width: '60%', position: 'absolute', marginTop: '10%', display: 'none', opacity: '0' }} src={RedTenQuickie} alt='10 Quickies 0.35 mg per Quickie'></img>
               </div>
 
               <div className='strainActivities Q10' style={{ marginTop: '100px', display: 'none', opacity: '0' }}>
@@ -667,6 +668,7 @@ if(loading){
               </div>
             </div>
           </Carousel>
+          <p className='footerP'>This communication is intended for adults only and should not be shared with minors. There are risks associated with cannabis use. For information, search online “Health Canada - cannabis health effects”.</p>
         </div>
       </section>
 
