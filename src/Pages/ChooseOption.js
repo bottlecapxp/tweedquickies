@@ -20,7 +20,7 @@ import './Pages.scss'
 const ChooseOption = (props) => {
     const history = useHistory()
     const viewInfoKush = () =>{
-        history.push('/tweed-info/Kush')
+        history.push('/tweed-info/kush')
     }
 
     const viewInfoCush = () =>{
