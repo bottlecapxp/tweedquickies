@@ -133,18 +133,15 @@ const history = useHistory()
     } else {
       gsap.to(".afghan_container", {
         opacity: 1,
-        // height: "90vh",
-        minHeight: "90vh"
+        height: "90vh",
       })
       gsap.to(".green_cush_container", {
         opacity: 1,
-        // height: "10vh",
-        minHeight: "10vh"
+        height: "60px",
       })
       gsap.to(".chemdawg_container", {
         opacity: 1,
-        // height: "10vh",
-        minHeight: "10vh"
+        height: "60px",
       })
     }
 
@@ -193,6 +190,7 @@ const history = useHistory()
   }, [])
 
   const afghanToggle = () => {
+
     gsap.to(".afghanHiddenTitle", {
       display: "none", duration: "0"
     })
@@ -203,13 +201,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".afghan_container", {
-      duration: "1", minHeight: "90vh"
+      duration: "1", height: "100vh"
     })
     gsap.to(".green_cush_container", {
-      duration: "1", minHeight: "10vh"
+      duration: "1", height: "60px"
     })
     gsap.to(".chemdawg_container", {
-      duration: "1" , minHeight: "10vh"
+      duration: "1" , height: "60px"
     })
     gsap.to(".afghanNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -236,13 +234,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".green_cush_container", {
-      duration: "1", minHeight: "90vh"
+      duration: "1", height: "100vh"
     })
     gsap.to(".chemdawg_container", {
-      duration: "1", minHeight: "10vh"
+      duration: "1", height: "60px"
     })
     gsap.to(".afghan_container", {
-      duration: "1", minHeight: "10vh"
+      duration: "1", height: "60px"
     })
     gsap.to(".greencushNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -269,13 +267,13 @@ const history = useHistory()
       opacity: '0', display: "none", duration: "1", pointerEvents: 'none'
     })
     gsap.to(".chemdawg_container", {
-      duration: "1", minHeight: "90vh"
+      duration: "1", height: "100vh"
     })
     gsap.to(".green_cush_container", {
-      duration: "1", minHeight: "10vh"
+      duration: "1", height: "60px"
     })
     gsap.to(".afghan_container", {
-      duration: "1", minHeight: "10vh"
+      duration: "1", height: "60px"
     })
     gsap.to(".chemdawgNoDisplay", {
       display: 'block', opacity: '1', duration: "1", pointerEvents: 'initial'
@@ -424,7 +422,7 @@ if(loading){
             </div>
 
             {/* Info Capture */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0%' }}>
+            <div className="largeSlide" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0%' }}>
               <img style={{ width: '70%', marginTop: '20px', marginBottom: '20px' }} src={AfghanKushTitle2} alt=''></img>
 
               <div className='caseContainer'>
