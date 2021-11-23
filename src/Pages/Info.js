@@ -164,30 +164,15 @@ const history = useHistory()
 
     }, 3000)
 
-    // setTimeout(() => {
-
-    //   gsap.to('.title_name', {
-    //     opacity: '1',
-    //     duration: '1'
-    //   })
-    //   gsap.to('.Q1G', {
-    //     display: 'none',
-    //     opacity: '0',
-    //     duration: '1'
-    //   })
-    //   gsap.to('.Q10G', {
-    //     display: 'block',
-    //     opacity: '1',
-    //     duration: '1'
-    //   })
-
-    // }, 2500)
-
     gsap.to(".footer", {
       position: 'absolute', bottom: '0', marginBottom: '10%', duration: "0.5"
     })
 
   }, [])
+
+  const navigateToOptions = () =>{
+    history.push('/option')
+  }
 
   const afghanToggle = () => {
 
@@ -368,7 +353,7 @@ if(loading){
         <div className='afghanNoDisplay'>
           <div className='header'>
             <img className='tweedLogo' src={LogoBlue} alt=''></img>
-            <img className='tweedLogo hbm' src={AfghanHamburgMenu} alt=''></img>
+            <img className='tweedLogo hbm' src={AfghanHamburgMenu} onClick={navigateToOptions} alt=''></img>
           </div>
 
           <Carousel showThumbs={false} preventMovementUntilSwipeScrollTolerance={true} showStatus={false} showIndicators={false} autoPlay={false}>
@@ -473,7 +458,7 @@ if(loading){
         <div className='greencushNoDisplay'>
           <div className='header'>
             <img className='tweedLogo' src={LogoRed} alt=''></img>
-            <img className='tweedLogo hbm' src={RedHamburgerMenu} alt=''></img>
+            <img className='tweedLogo hbm' src={RedHamburgerMenu} onClick={navigateToOptions} alt=''></img>
           </div>
 
           <Carousel showThumbs={false} showStatus={false} preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} autoPlay={false}>
@@ -576,7 +561,7 @@ if(loading){
         <div className='chemdawgNoDisplay'>
           <div className='header'>
             <img className='tweedLogo' src={LogoRed} alt=''></img>
-            <img className='tweedLogo hbm' src={RedHamburgerMenu} alt=''></img>
+            <img className='tweedLogo hbm' src={RedHamburgerMenu} onClick={navigateToOptions} alt=''></img>
           </div>
 
           <Carousel showThumbs={false} showStatus={false} preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} autoPlay={false}>
