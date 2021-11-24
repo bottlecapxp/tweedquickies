@@ -1,6 +1,6 @@
 import React from 'react'
 import LogoBlack from '../../Assets/tweed-logo-black.svg'
-import GreenCush from '../../Assets/green-cush-quickies.svg'
+import GreenCush from '../../Assets/Greencush/green-cush-quickies.svg'
 import './Loading.css'
 
 /**

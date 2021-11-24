@@ -2,8 +2,9 @@
 width: 100vw;
 height: 100vh;
 overflow: hidden;
-background-image: linear-gradient(to right,#02AFAC, #C0DF88);
+background: 0;
 }
+#webXP_bg * { color: #000; }
 #logo_holder{
     width: 100%;
     display: flex;
