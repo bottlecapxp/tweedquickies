@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from '../../Assets/tweed-logo-white.svg'
-import QR from '../../Assets/whiteQR.svg'
+import Logo from '../../Assets/tweed-logo-black.svg'
+import QR from '../../Assets/blackQR.png'
 import './WebXP.css'
 
 /**

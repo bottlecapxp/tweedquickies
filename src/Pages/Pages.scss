@@ -8,15 +8,17 @@ $textRed: #EA514B;
 
 .option_container{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   .wrapper_info{
-    position: relative;
-    min-height: 33.3333333vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    min-height: 33.3333333vh;
 
     .exploreBtn {
       text-transform: uppercase;
@@ -24,58 +26,30 @@ $textRed: #EA514B;
       border-radius: 7.5px;
       background: #fff;
       color: $textRed;
-      position: absolute;
-      bottom: 15px;
       padding: 5px 15px;
     }
 
-    &.greenCush {
-      &.noTitle {
-        padding-top: 60px;
-      }
-    }
-
-    &.afghanKush {
-      &.noTitle {
-        padding-top: 70px;
-      }
-    }
-
-    &.chemdawg {
-      .titleContainer {
-        margin-bottom: 100px;
-      }
-
-      .productImg {
-        img {
-          top: -80px;
-        }
-      }
+    .titleContainer{
+      margin-bottom: 3vh;
     }
   }
 
   .logo_img{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 
     .option_logo{
-      padding-top: 20px;
       width: 60px;
       margin-bottom: 20px;
     }
   }
 
   .productImg{
+    margin-bottom: 2vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 
-    img{
-      width: 50%;
-      top: 20px;
-      position: relative;
-    }
+    img{ width: 50%; }
   }
 
 }
@@ -104,9 +78,8 @@ $textRed: #EA514B;
 
   .strainFlavorProfile{
     margin-top: 20px;
-    img {
-      max-width: 50%;
-    }
+
+    img { max-width: 70%; }
   }
 
   .strainActivities {
@@ -137,9 +110,9 @@ $textRed: #EA514B;
 
   .caseContainer{
     margin-bottom: 20px;
-    img {
-      max-width: 250px;
-    }
+    width: 60%;
+
+    img { max-width: 250px; }
   }
 
   .afks{
@@ -149,7 +122,6 @@ $textRed: #EA514B;
   .budImg {
     width: 60%;
   }
-
 
 
   &.afghan_container {
@@ -179,12 +151,6 @@ $textRed: #EA514B;
       border-color: $textRed !important;
     }
 
-    .strainActivities {
-      img {
-        max-width: 60%;
-      }
-    }
-
     .afks {
       width: 75%;
     }
@@ -200,12 +166,6 @@ $textRed: #EA514B;
     .submitButton {
       border-color: $textRed !important;
     }
-
-    .strainActivities {
-      img {
-        max-width: 60%;
-      }
-    }
   }
 
 
@@ -214,9 +174,8 @@ $textRed: #EA514B;
 .active{
   display: flex;
 }
-
 .footerP{
-  font-size: 7px;
+  font-size: 10px;
   text-align: center;
   padding: 0px 10% 0px 10%;
 }
@@ -225,10 +184,11 @@ $textRed: #EA514B;
   padding: 10px 0px 10px 0px;
   width: 16%;
 }
-/* Slideshow container */
 
+/* Slideshow container */
 .carousel-root {
   min-height: 85vh;
+
   .slide {
     min-height: 85vh;
     width: 100vw;
