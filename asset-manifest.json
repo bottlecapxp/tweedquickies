@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tweedquickies/static/css/main.9f9464dc.chunk.css",
-    "main.js": "/tweedquickies/static/js/main.c0633052.chunk.js",
-    "main.js.map": "/tweedquickies/static/js/main.c0633052.chunk.js.map",
+    "main.js": "/tweedquickies/static/js/main.0436e92a.chunk.js",
+    "main.js.map": "/tweedquickies/static/js/main.0436e92a.chunk.js.map",
     "runtime-main.js": "/tweedquickies/static/js/runtime-main.0c591b58.js",
     "runtime-main.js.map": "/tweedquickies/static/js/runtime-main.0c591b58.js.map",
     "static/css/2.4ce9e501.chunk.css": "/tweedquickies/static/css/2.4ce9e501.chunk.css",
@@ -89,6 +89,6 @@
     "static/css/2.4ce9e501.chunk.css",
     "static/js/2.62fef74e.chunk.js",
     "static/css/main.9f9464dc.chunk.css",
-    "static/js/main.c0633052.chunk.js"
+    "static/js/main.0436e92a.chunk.js"
   ]
 }
